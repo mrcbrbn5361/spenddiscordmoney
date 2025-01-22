@@ -44,6 +44,15 @@ npm start
 
 Uygulama başlatıldıktan sonra tarayıcınızda `http://localhost:3000` adresine giderek Discord Para Harcama Simülatörünü kullanmaya başlayabilirsiniz.
 
+## Vercel Deployment
+
+1. [Vercel](https://vercel.com)'e GitHub hesabınızla giriş yapın
+2. "New Project" butonuna tıklayın
+3. Bu repository'yi seçin
+4. Deploy butonuna tıklayın
+
+Vercel otomatik olarak projeyi derleyip yayınlayacaktır. Deploy tamamlandığında size bir URL verilecek.
+
 ## Katkıda Bulunma
 
 1. Bu repository'yi fork edin
