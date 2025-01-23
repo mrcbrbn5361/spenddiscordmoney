@@ -12,7 +12,13 @@
   "routes": [
     {
       "src": "/static/(.*)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
       "dest": "/static/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "dest": "/images/$1"
     },
     {
       "src": "/favicon.ico",
@@ -23,11 +29,8 @@
       "dest": "/manifest.json"
     },
     {
-      "src": "/(.*).(js|json|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)",
-      "dest": "/$1.$2"
-    },
-    {
       "src": "/(.*)",
+      "headers": { "cache-control": "public, max-age=0, must-revalidate" },
       "dest": "/index.html"
     }
   ]

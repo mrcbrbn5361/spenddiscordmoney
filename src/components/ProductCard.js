@@ -17,16 +17,20 @@ function ProductCard({ product, canBuy }) {
     dispatch(sellProduct(product));
   };
 
+  const getImageUrl = (path) => {
+    return window.location.origin + path;
+  };
+
   return (
     <div className="product-card">
       <div className="image-container">
         <img 
-          src={product.image}
+          src={getImageUrl(product.image)}
           alt={product.name}
           className="product-image"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = '/images/discord-logo.png';
+            e.target.src = getImageUrl('/images/discord-logo.png');
           }}
         />
       </div>
