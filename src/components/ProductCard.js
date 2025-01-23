@@ -21,12 +21,12 @@ function ProductCard({ product, canBuy }) {
     <div className="product-card">
       <div className="image-container">
         <img 
-          src={process.env.PUBLIC_URL + product.image}
+          src={product.image}
           alt={product.name}
           className="product-image"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = process.env.PUBLIC_URL + '/images/discord-logo.png';
+            e.target.src = '/images/discord-logo.png';
           }}
         />
       </div>
